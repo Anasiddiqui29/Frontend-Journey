@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BBC</title>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            /* style for news section */
+            .news {
+                padding: 20px;
+            }
+
+            .news h1 {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+
+            .image-container {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .news-item {
+                width: calc(30% - 10px); 
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .news-item img {
+                width: 100%;
+                height: auto;
+                ;
+            }           
+
+            /* Text beneath images */
+            .news-item p {
+                margin-top: 10px;
+                font-size: 14px;
+            }
+
+            /* Styles for Sports Section */
+            .sports-section {
+                padding: 20px;
+            }
+
+            .sports-section h1 {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+
+            .sports-item {
+                width: calc(30% - 10px); /* Adjust width to fit three items with spacing */
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .sports-item img {
+                width: 100%;
+                height: auto;
+            }
+
+            /* Text beneath images */
+            .sports-item p {
+                margin-top: 10px;
+                font-size: 14px;
+            }
+            em.text1{
+                font-weight: bold;
+            }
+            em.text3{
+                font-weight: bold;
+            }
+            em.text5{
+                font-weight: bold;
+            }
+            em.text7{
+                font-weight: bold;
+            }
+            em.text9{
+                font-weight: bold;
+            }
+            em.text11{
+                font-weight: bold;
+            }
+            .menu{
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            .menu li{
+                display: inline-block;
+                background-color: black;
+                margin-right: 10px;
+            }
+            .menu li a{
+                display: block;
+                padding: 10px 20px;
+                color: white;
+                text-decoration: none;
+            }
+            .branding {
+                display: flex;
+                align-items: center;
+            }
+
+            .branding span {
+                font-weight: bold;
+                font-size: 1.2em;
+                margin-right: 10px;
+            }
+
+            .branding a {
+                color: #333;
+                text-decoration: none;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="header-content">
+                <div class="branding">
+                    <span>BBC</span>
+                    <a href="#">Sign In</a>
+                </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Sport</a></li>
+                    <li><a href="#">Weather</a></li>
+                    <li><a href="#">Reel</a></li>
+                    <li><a href="#">Culture</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h2>Welcome to BBC.com</h2>
+            <section class="news">
+                <h1>News</h1>
+                <div class="image-container">
+                    <div class="news-item">
+                        <img src="images/biden.jpg" alt="preview not available">
+                        <p> <em class="text1">Ukraine aid from US in doubt after failed Senate vote</em>
+                            <br><em class="text2"> Security aid is in jeopardy as US Republicans insist on new US-Mexico security measures</em>
+                        </p>
+                    </div>
+                    <div class="news-item">
+                        <img src="images/tank.jpg" alt="preview not available">
+                        <p> <em class="text3">Israeli tanks shell Jabalia camp as heavy fighting continues in north Gaza</em>
+                            <br><em class="text4">The refugee camp has been hit by hundreds of shells, 
+                                where Hamas says 100,000 people are still sheltering</em>
+                        </p>
+                    </div>
+                    <div class="news-item">
+                        <img src="images/khan.jpg" alt="preview not available">
+                        <p><em class="text5">Imran Khan's party elects new chairman ahead of Pakistan's election</em>
+                            <br><em class="text6">One of ousted Pakistani prime minister Imran Khan's lawyers was elected on Saturday 
+                                as chairman of his party.</em>
+                        </p>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="sports-section">
+                <h1>Sports</h1>
+                <div class="image-container">
+                    <div class="sports-item">
+                        <img src="images/messi.jpg" alt="Sports 1">
+                        <p><em class="text7">Soccer Legend Lionel Messi To Play for Inter Miami</em>
+                            <br><em class="text8">Superstar footballer Lionel Messi announced Wednesday he intends to play for Inter Miami</em>
+                        </p>
+                    </div>
+                    <div class="sports-item">
+                        <img src="images/sports2.jpg" alt="Sports 2">
+                        <p><em class="text9">Doncic scores 40 points as MAverick thrash jazz</em>
+                            <br><em class="text10">Luka Doncic scores a first-half triple-double to help the Dallas Mavericks to a 
+                                convincing 147-97 victory over the Utah Jazz.</em>
+                        </p>
+                    </div>
+                    <div class="sports-item">
+                        <img src="images/sports3.jpg" alt="Sports 3">
+                        <p><em class="text11">We are struggling-vulnerable Man city in mini crisi</em>
+                            <br><em class="text12">Manchester City are six points behind leaders Arsenal
+                                in the premier league</em>
+                        </p>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="weather-section">
+                <h1>Weather - Karachi</h1>
+                <div class="weather-container">
+                    <!-- Weather forecast for Karachi -->
+                    <div class="weather-item">
+                        <p>Thurs - 29 C</p>
+                    </div>
+                    <div class="weather-item">
+                        <p>Fri - 24 C</p>
+                    </div>
+                    <div class="weather-item">
+                        <p>Sat - 19 C</p>
+                    </div>
+                    <div class="weather-item">
+                        <p>Sun - 18 C</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <h1>Feedback Form</h1>
+        <form id="feedbackForm" action="thankyou.html" method="post" onsubmit="return validateForm()">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required><br><br>
+    
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required><br><br>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+    
+            <label for="phone">Phone number:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+    
+            <label for="feedbackMsg">Feedback Msg:</label>
+            <textarea id="feedbackMsg" name="feedbackMsg" required></textarea><br><br>
+    
+            <input type="submit" value="Submit">
+        </form>
+        <script>
+            function validateForm() {
+                // Basic validation (you can enhance this)
+                var firstName = document.getElementById('firstName').value;
+                var lastName = document.getElementById('lastName').value;
+                var email = document.getElementById('email').value;
+                var phone = document.getElementById('phone').value;
+                var feedbackMsg = document.getElementById('feedbackMsg').value;
+    
+                // Example: Check if email is valid (using a simple regex)
+                var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    alert("Please enter a valid email address.");
+                    return false;
+                }
+                return true; 
+            }
+        </script>
+        <footer>
+            <p>Copyright © 2023 BBC. All rights reserved.</p>
+        </footer>
+    </body>
+</html>
