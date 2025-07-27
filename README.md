@@ -39,10 +39,4 @@ Each folder represents a separate project built during different stages of my le
 
 ---
 
-## 🌐 Portfolio Link
-
-Visit my live portfolio here: [Not live right now] 
-
----
-
 > Thanks for visiting! Feel free to explore, fork, or suggest improvements via issues or pull requests!
