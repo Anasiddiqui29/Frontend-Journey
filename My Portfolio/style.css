@@ -76,7 +76,7 @@ h1{
 .Copyright{
     margin-top: 100px; /*Pushes it down after the content*/
     color: white;
-    text-align: center;
+    text-align: center; 
 
 }
 
@@ -287,6 +287,27 @@ a{
 
 .git i:hover{
     transform: scale(1.2);
+}
+
+.email{
+    color: white;
+}
+
+.linkedin{
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: rgba(0, 255, 255, 0.3);
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border: none;
+}
+
+.linkedin:hover{
+    transform: translateX(5px);
 }
 
 
