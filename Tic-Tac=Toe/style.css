@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #7DDF64;
+    text-align: center;
+}
+
+.container{
+    height: 70vh; /*70% of the viewport height*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.game{
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap; /*tems will wrap onto multiple lines from top to bottom (in a row layout).*/
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
+}
+
+/*Styling of each boxes... Is me har line ko approximatey 18px de diye hai */
+.box{
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem rgba(0, 0 ,0 , 0.5);
+    font-size: 8vmin;
+    color: #deb986;
+    border: none;
+    background-color: #DB6C79;
+
+}
+
+.reset{
+    padding: 1rem;
+    font-size: 1.25rem;
+    border-radius: 1.5rem;
+    background-color: #ED4D6E;
+    border: none;
+
+}
+
+.new{
+    padding: 1rem;
+    font-size: 1.25rem;
+    border-radius: 1.5rem;
+    background-color: #ED4D6E;
+    border: none;
+}
+
+#msg{
+    font-size: 8vmin;
+}
+
+.msg-container{
+    height: 90vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.hide{
+    display: none;
+}
