@@ -1,198 +1,189 @@
-#intro2{
+/* ====== Text Gradient ====== */
+#intro2 {
     font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(to right , #056b6b ,  #0da81d);
+    background: linear-gradient(to right, #056b6b, #0da81d);
     background-clip: text;
-    -webkit-background-clip: text; /*clips backgroung to text*/
+    -webkit-background-clip: text; /* Safari compatibility */
     color: transparent;
     -webkit-text-fill-color: transparent;
 }
 
-#intro1{
+#intro1 {
     color: white;
-    font-style: initial;
+    font-style: normal;
     font-family: Arial, Helvetica, sans-serif;
-} 
-
-h1{
-    text-align: center;
-    font-size: 60px;
 }
 
-.Sintro{
+/* ====== Headings ====== */
+/* clamp() ensures text scales but has min & max sizes for better readability */
+h1 {
     text-align: center;
-    /* color: rgb(26, 178, 26); */
+    font-size: clamp(1.5rem, 6vmin, 4rem);
+}
+
+.Sintro {
+    text-align: center;
     color: rgba(62, 211, 70, 0.6);
     font-weight: bolder;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 30px;
+    font-size: clamp(1.5rem, 6vmin, 4rem);
 }
 
-#bg-video{
-  position: fixed;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  width: 100vw;
-  height: 100vw;
-  z-index: -1; /*This is so that the text on the screen can appear at the top*/
-  object-fit: cover;
-  background-size: cover;
+/* ====== Background Video ====== */
+/* height changed from vw to vh to fill the whole screen height */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    object-fit: cover; /* prevents stretching */
 }
 
-.my-image{
+/* ====== Profile Image ====== */
+.my-image {
     display: block;
     margin: 0 auto;
-    width: 250px;
-    height: 250px;
-    border-radius: 50%; /*For circular photo*/
+    width: clamp(150px, 20vw, 250px); /* responsive size */
+    height: clamp(150px, 20vw, 250px);
+    border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3); /*Adds a shadow to the profile picture*/
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
     border: 8px solid #082122;
 }
 
-.box{
+.box {
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
 }
 
-.navigation-bar{
+/* ====== Navigation Bar ====== */
+/* Mobile friendly: we'll change this in media queries */
+.navigation-bar {
     position: fixed;
     top: 0;
     left: 0;
     width: 80px;
     height: 100vh;
     background-color: transparent;
-
+    backdrop-filter: blur(1px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     gap: 30px;
     padding: 20px 0px;
-    z-index: 100; /* stays above bg-video */
+    z-index: 100;
 }
 
-.Copyright{
-    margin-top: 100px; /*Pushes it down after the content*/
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
     color: white;
-    text-align: center; 
-
+    cursor: pointer;
+    /* background: rgba(0,0,0,0.6); */
+    padding: 8px 12px;
+    border-radius: 5px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 200;
 }
 
-.Home{
-   padding: 10px 20px;
-   cursor: pointer;
-   background: transparent;
-   outline: none;
-   border: none;
+
+.Copyright {
+    margin-top: 100px;
+    color: white;
+    text-align: center;
 }
 
+/* ====== Buttons ====== */
+.Home, .About, .Achieve, .skill {
+    padding: 10px 20px;
+    cursor: pointer;
+    background: transparent;
+    outline: none;
+    border: none;
+}
+
+/* ====== Material Icons ====== */
 .material-symbols-outlined {
-  color: green;
-  font-size: 50px !important;
-  text-shadow: 0 0 10px rgb(0, 142, 0);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+    color: green;
+    font-size: clamp(30px, 5vw, 50px) !important;
+    text-shadow: 0 0 10px rgb(0, 142, 0);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.material-symbols-outlined:hover{
+.material-symbols-outlined:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 25px rgba(0, 255, 0, 0.4); 
+    box-shadow: 0 0 25px rgba(0, 255, 0, 0.4);
 }
 
-.About{
-   padding: 10px 20px;
-   cursor: pointer;
-   background: transparent;
-   outline: none;
-   border: none;
-}
-
-.Achieve{
-   padding: 10px 20px;
-   cursor: pointer;
-   background: transparent;
-   outline: none;
-   border: none;
-}
-
-.skill{
-   padding: 10px 20px;
-   cursor: pointer;
-   background: transparent;
-   outline: none;
-   border: none;
-}
-
-/*Below is styling for 'about' section*/
-
-/*This is for the image in about section*/
-.AboutSec{
+/* ====== About Section ====== */
+.AboutSec {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 30px;
     padding: 30px;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* ✅ allows stacking on small screens */
     background-color: rgba(8, 224, 224, 0.07);
-    
 }
 
-.my-image2{
-    height: 250px;
-    width: 250px;
-    border-radius: 50%; /*For circular photo*/
+.my-image2 {
+    width: clamp(150px, 20vw, 250px);
+    height: clamp(150px, 20vw, 250px);
+    border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3); /*Adds a shadow to the profile picture*/
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
     border: 8px solid #082122;
 }
 
-#abt{
-    font-size: 18px;
+#abt {
+    font-size: clamp(14px, 2.5vw, 18px);
     max-width: 600px;
     line-height: 1.6;
     font-family: Arial, sans-serif;
-    white-space: pre-wrap; /* So line breaks look nice */
-    color: rgb(228, 165, 165); 
+    white-space: pre-wrap;
+    color: rgb(228, 165, 165);
 }
 
-/*Overall Education box*/
-.edu{
+/* ====== Education Section ====== */
+.edu {
     background-color: rgba(8, 224, 224, 0.07);
     display: flex;
     justify-content: center;
-    gap: 50px;
-    padding: 40px;
-    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px;
+    flex-wrap: wrap; /* ✅ responsive grid */
 }
 
 .edu-card {
-    background: rgba(19, 212, 19, 0.1);
+    background: rgba(19, 212, 19, 0.19);
     color: beige;
     padding: 20px 30px;
     border-radius: 20px;
-    text-align: center; /*Align the text to the center of the box*/
-    width: 250px;
+    text-align: center;
+    width: min(90%, 250px); /* ✅ max size but fits small screens */
     box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-/*For the effect when the mouse hover on the boxes*/
 .edu-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 0 25px rgba(0, 255, 0, 0.4);
 }
 
-.style1{
+.style1 {
     color: #0da81d;
     font-weight: bold;
 }
 
-/* Below is styling for skills section */
+/* ====== Skills Section ====== */
 .Skills {
-    /*Flex item will always try to fit in the flex*/
-    display: flex; 
-    flex-wrap: wrap; /*Allow items to wrap on the multiple lines.It will automatically moves the item on next if not enough space.*/
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     background-color: rgba(8, 224, 224, 0.07);
     justify-content: center;
@@ -200,57 +191,22 @@ h1{
     padding: 20px;
     width: 80%;
     max-width: 800px;
-    margin: 0 auto; /* centers the div horizontally */
+    margin: 0 auto;
     border-radius: 12px;
 }
 
-#c{
+/* All skill boxes share same style — combined for DRY code */
+#c, #c1, #python, #html, #css {
     background: rgba(19, 212, 19, 0.1);
     color: beige;
     padding: 20px 30px;
     border-radius: 9px;
-    text-align: center; /*Align the text to the center of the box*/
-    width: 100px;
-    /* box-shadow: 0 0 20px rgba(0, 255, 0, 0.2); */
-}
-
-#c1{
-    background: rgba(19, 212, 19, 0.1);
-    color: beige;
-    padding: 20px 30px;
-    border-radius: 9px;
-    text-align: center; /*Align the text to the center of the box*/
+    text-align: center;
     width: 100px;
 }
 
-#python{
-    background: rgba(19, 212, 19, 0.1);
-    color: beige;
-    padding: 20px 30px;
-    border-radius: 9px;
-    text-align: center; /*Align the text to the center of the box*/
-    width: 100px;
-}
-
-#html{
-    background: rgba(19, 212, 19, 0.1);
-    color: beige;
-    padding: 20px 30px;
-    border-radius: 9px;
-    text-align: center; /*Align the text to the center of the box*/
-    width: 100px;
-}
-
-#css{
-    background: rgba(19, 212, 19, 0.1);
-    color: beige;
-    padding: 20px 30px;
-    border-radius: 9px;
-    text-align: center; /*Align the text to the center of the box*/
-    width: 100px;
-}
-
-.Resume{
+/* ====== Resume Button ====== */
+.Resume {
     display: block;
     margin: 20px auto;
     border-radius: 5%;
@@ -258,56 +214,94 @@ h1{
     background-color: #0da81d;
     color: white;
     font-weight: bold;
-    font-size: 16px;
+    font-size: clamp(14px, 2vw, 16px);
     cursor: pointer;
     transition: transform 0.3s ease;
     border: none;
-    
 }
 
-.Resume:hover{
+.Resume:hover {
     box-shadow: 0 0 25px rgba(0, 255, 0, 0.4);
     transform: translateY(-5px);
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-.git{
+/* ====== Social Links ====== */
+.git {
     display: flex;
     flex-direction: row;
-    justify-content: center; /*Horizontally align content*/
-    align-items: center; /*Verically align content*/
+    justify-content: center;
+    align-items: center;
 }
 
-.git i{
+.git i {
     transition: 0.3s;
 }
 
-.git i:hover{
+.git i:hover {
     transform: scale(1.2);
 }
 
-.email{
+.email {
     color: white;
 }
 
-.linkedin{
+.linkedin {
     display: block;
     margin: 20px auto;
     padding: 10px 20px;
     background-color: rgba(0, 255, 255, 0.3);
     color: white;
     font-weight: bold;
-    font-size: 16px;
+    font-size: clamp(14px, 2vw, 16px);
     cursor: pointer;
     transition: transform 0.3s ease;
     border: none;
 }
 
-.linkedin:hover{
+.linkedin:hover {
     transform: translateX(5px);
+}
+
+/* ====== Media Queries ====== */
+/* Mobile (below 768px) */
+@media (max-width: 768px) {
+    .navigation-bar {
+        display: none; /*Hide the menu by default*/
+        flex-direction: column; /* move nav to top */
+        position: fixed;
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        border-radius: 8px;
+        gap: 20px;
+    }
+    
+    .menu-toggle{
+        display: block;
+    }
+
+    .Copyright {
+        margin-top: 0;
+        font-size: 12px;
+    }
+
+    .navigation-bar.active {
+    display: flex; /* Show when toggle is active */
+   }
+
+   .nav-menu.active { display: flex; }
+
+}
+
+/* Tablets (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .navigation-bar {
+        width: 60px;
+    }
 }
 
 
