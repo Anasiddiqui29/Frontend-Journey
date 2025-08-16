@@ -24,7 +24,7 @@ Each folder represents a separate project built during different stages of my le
 
 - HTML5
 - CSS3 (Flexbox, Grid, Media Queries)
-- JavaScript (coming soon)
+- JavaScript (It's here)
 - Responsive Design
 - Git & GitHub
 
