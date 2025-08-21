@@ -1,0 +1,63 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: darkgoldenrod;
+}
+
+.container{
+    background-color: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    min-height: 45vh;
+    width: 40vh;
+}
+
+form select , button , input{
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+}
+
+form input{
+    border: 1px solid lightcoral;
+    font-size: 1rem;
+}
+
+.dropdown{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+form button{
+    font-size: 1.1rem;
+    height: 3rem;
+    margin-top: 1rem;
+}
+
+.select-container img{
+    max-width: 2.5rem;
+}
+
+.select-container{
+    display: flex;
+    border-radius: 1rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    width: 6rem;
+    border: 1px solid lightcoral;
+}
+
+.msg {
+    margin: 1rem 0 1rem 0;
+}
+
+.dropdown span{
+    font-size: 1rem;
+    margin-top: 3rem;
+}
