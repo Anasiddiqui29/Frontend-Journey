@@ -50,6 +50,8 @@ const playGame = (UserChoice) => {
     {
         console.log("draw");
         msg.innerText = "Draw";
+        compMsg.innerText = "Computer : " + compChoice;
+        userMsg.innerText = "You : " + UserChoice;
     }
     else
     {
