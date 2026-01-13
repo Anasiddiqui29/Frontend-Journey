@@ -1,0 +1,259 @@
+.heading{
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+body{
+  min-height: 100vh;
+  background-color: #e899ac;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.input_task{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.task_box {
+  width: 100%;
+  max-width: 420px;
+
+  padding: 14px 18px;
+  font-size: 1rem;
+
+  margin-top: 2rem;
+
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+
+  background-color: #ffffff;
+  color: #111827;
+
+  outline: none;
+  transition: all 0.3s ease;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+}
+
+/* Focus effect */
+.task_box:focus {
+  border-color: #e03b16;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+}
+
+/* Placeholder styling */
+.task_box::placeholder {
+  color: #9ca3af;
+  font-weight: 400;
+}
+
+.Add_but{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.25); /* translucent */
+  color: #111;
+  border: 1px solid #e5e7eb;
+
+  margin-left: 2rem;
+  margin-top: 1.5rem;
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.Add_but:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.Add_btn:active {
+  transform: scale(0.97);
+}
+
+/* Container UL */
+.list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  max-width: 420px; /* match your input width */
+  margin: 1rem auto; /* center the whole block */
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem; /* space between tasks */
+}
+
+/* Each todo item */
+.list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.2s ease;
+}
+
+.list li:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Checkbox */
+.list li input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* Task text */
+.task-text {
+  flex: 1; /* take all remaining space */
+  font-size: 1rem;
+  color: #fff;
+  word-break: break-word;
+}
+
+/* Due date */
+.task-date {
+  font-size: 0.8rem;
+  color: #a1a1aa; /* soft gray */
+  white-space: nowrap;
+}
+
+/* Overdue highlight */
+.overdue {
+  color: #ef4444; /* red for overdue */
+  font-weight: 500;
+}
+
+/* Edit button */
+.but_edit {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.but_edit:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+/* Input field when editing */
+.list li input[type="text"] {
+  flex: 1;
+  padding: 8px 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  backdrop-filter: blur(8px);
+  transition: all 0.2s ease;
+}
+
+.list li input[type="text"]:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.25);
+}
+
+.date_picker {
+  margin-left: 2rem;
+  margin-top: 1.5rem;
+
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+
+  background: rgba(19, 202, 102, 0.8);
+  backdrop-filter: blur(8px);
+
+  font-size: 0.9rem;
+}
+
+.del_todo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.but_del{
+  width: auto;
+  height: 30px;
+
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+
+  background: rgba(255, 255, 255, 0.25); /* translucent */
+  color: #111;
+
+  margin-left: 2rem;
+  margin-top: 1.5rem;
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.but_del:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.but_del:active {
+  transform: scale(0.97);
+}
+
+.clear_todo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 2rem;
+
+}
+
+.but_clear{
+  width: auto;
+  height: 30px;
+
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+
+  background: rgba(255, 255, 255, 0.25); /* translucent */
+  color: #111;
+
+  margin-left: 2rem;
+  margin-top: 1.5rem;
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}

@@ -1,0 +1,18 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.inc{
+  padding: 1rem;
+  margin-right: 0.5rem;
+  background-color: rgb(15, 189, 15);
+}
+
+.dec{
+  padding: 1rem;
+  margin-left: 0.5rem;
+  background-color: rgb(211, 40, 40);
+}
