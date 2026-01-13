@@ -18,7 +18,9 @@ This repository showcases my progress from **HTML & CSS fundamentals** to **Java
 ### 🔹 JavaScript
 Projects focused on DOM manipulation, logic building, and interactivity.
 
-*(More projects will be added as I continue learning)*
+- **Current Converter** – Can convert any currency to any currency  
+- **Rock Paper Game** – Rock Paper scissor game just like our childhood
+- **Tic Toe Game** – Simple tic tac game you can play with computer
 
 ---
 
