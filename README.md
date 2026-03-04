@@ -1,42 +1,64 @@
 # 🚀 Frontend Journey
 
-Welcome to my **Frontend Journey** — a collection of all the projects I've built while learning and mastering HTML, CSS, and JavaScript.
+Welcome to my **Frontend Journey** — a collection of projects built while learning and strengthening my frontend development skills.
 
-From beginner replicas to real-world websites, this repository showcases my growth as a front-end developer.
-
----
-
-## 🧠 What’s Inside
-
-Each folder represents a separate project built during different stages of my learning path.
-
-| Project              | Description                                      | Live Demo             |
-|----------------------|--------------------------------------------------|-----------------------|
-| `BBC-News-Replica`   | A static clone of the BBC News homepage          |  -                    |
-| `Amazon-Replica`     | A static UI recreation of Amazon’s homepage      |  -                    |
-| `Portfolio-Website`  | My personal responsive portfolio website         |  -                    |
-
-> More projects coming soon as I dive deeper into JavaScript and beyond!
+This repository showcases my progress from **HTML & CSS fundamentals** to **JavaScript and React-based applications**, following a structured and hands-on learning path.
 
 ---
 
-## 📚 Skills Used
+## 🧠 Projects Overview
 
-- HTML5
-- CSS3 (Flexbox, Grid, Media Queries)
-- JavaScript (It's here)
-- Responsive Design
-- Git & GitHub
+### 🔹 HTML & CSS
+- **BBC News Replica** – Static recreation of the BBC News homepage  
+- **Amazon Replica** – UI clone of Amazon’s homepage  
+- **Portfolio Website** – Personal responsive portfolio website  
+
+---
+
+### 🔹 JavaScript
+Projects focused on DOM manipulation, logic building, and interactivity.
+
+- **Current Converter** – Can convert any currency to any currency  
+- **Rock Paper Game** – Rock Paper scissor game just like our childhood
+- **Tic Toe Game** – Simple tic tac game you can play with computer
 
 ---
 
-## 🚧 Future Goals
+### 🔹 React
+Small to medium React applications built to understand component-based architecture and state management.
 
-- Add JavaScript-based interactive projects  
-- Use frameworks like **Bootstrap**, **Tailwind**, and eventually **React**  
-- Optimize all projects for responsiveness and accessibility  
-- Deploy more projects using **GitHub Pages** / **Netlify**
+Projects include:
+- Calculator App  
+- Counter App  
+- Quote Generator  
+- Todo List  
+- Temperature Converter  
 
 ---
+
+## 🛠️ Skills & Technologies
+
+- HTML5  
+- CSS3 (Flexbox, Grid, Media Queries)  
+- JavaScript (ES6+)  
+- React (Vite + React)  
+- Responsive Design  
+- Git & GitHub  
+
+---
+
+## 🚀 Future Goals
+
+- Build more JavaScript-driven projects  
+- Create larger and more structured React applications  
+- Improve code quality and best practices  
+- Deploy projects using Vercel / Netlify  
+- Explore Tailwind CSS and modern UI libraries  
+
+---
+
+## 📌 Note
+
+This repository is actively maintained and updated as I continue learning and building frontend project
 
 > Thanks for visiting! Feel free to explore, fork, or suggest improvements via issues or pull requests!
