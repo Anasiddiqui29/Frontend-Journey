@@ -2,6 +2,7 @@
 import React from 'react'
 import Link from 'next/link'
 import styles from './navbar.module.css'
+import DarkModeToogle from '../DarkModeToggle/DarkModeToogle';
 
 
 // creating the arrays of links that can be used in navbar
@@ -47,6 +48,9 @@ const Navbar = () => {
       </Link>
 
       <div className={styles.links}>
+
+        <DarkModeToogle />
+
         {links.map((link) => (
           <Link key={link.id} href={link.url} className={styles.link}>
             {link.title}

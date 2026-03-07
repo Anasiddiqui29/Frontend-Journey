@@ -1,3 +1,48 @@
-.container{
-    background-color: chocolate;
+.title{
+    font-size: 60px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.content{
+    display: flex;
+    gap: 100px;
+    align-items: center;
+}
+
+.imgContainer{
+    flex: 1;
+    position: relative;
+    height: 500px;
+}
+
+.img{
+    object-fit: contain;
+    animation: move 3s infinite ease alternate;
+}
+
+@keyframes move{
+    from{
+        transform: translateY(-15px);
+    }
+    to{
+        transform: translateY(0px) scale(1.02);
+    }
+}
+
+.form{
+    flex: 1;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.input , .textArea{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border: 3px solid;
+    color: #bbb;
+    font-weight: bold;
+    padding: 20px;
 }
