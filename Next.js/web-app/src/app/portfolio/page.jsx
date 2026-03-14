@@ -2,6 +2,14 @@ import React from 'react'
 import styles from './page.module.css'
 import Link from 'next/link'
 
+// The title names for every page which is the speciality for the next js
+// Enables SEO
+export const metadata = {
+  title: "LemonUp Portfolio",
+  description: "Description for Portfolio",
+};
+
+
 const Portfolio = () => {
   return (
     <div className={styles.container}>
