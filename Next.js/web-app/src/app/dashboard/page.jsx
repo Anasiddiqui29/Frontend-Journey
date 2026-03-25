@@ -5,6 +5,7 @@ import styles from './page.module.css'
 import { constants } from 'node:buffer';
 import useSWR from 'swr'
 import { useSession } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
 
 const Dashboard = () => {
 
@@ -41,11 +42,25 @@ const Dashboard = () => {
   // New way to fetch data 
 
   const session = useSession()
-  console.log(session)
+  
+  const router = useRouter();
+  
+  //NEW WAY TO FETCH DATA
+  const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
-  const fetcher = (url) => fetch(url).then((res) => res.json())
-  // The same SWR pattern you already know
-  const { data, error , isLoading } = useSWR('https://jsonplaceholder.typicode.com/posts', fetcher)
+  const { data, mutate, error, isLoading } = useSWR(
+    `/api/posts?username=${session?.data?.user.name}`,
+    fetcher
+  );
+
+  if (session.status === "loading") {
+    return <p>Loading...</p>;
+  }
+
+  if (session.status === "unauthenticated") {
+    router?.push("/dashboard/login");
+  }
+
 
   console.log(data)
 
