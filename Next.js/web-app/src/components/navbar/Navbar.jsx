@@ -14,19 +14,21 @@ const links = [
     title : "Home",
     url : "/"  
   },
-  {
-    id: 2,
-    title : "Portfolio",
-    url : "/portfolio",
-  },
+  // {
+  //   id: 2,
+  //   title : "Portfolio",
+  //   url : "/portfolio",
+  // },
   {
     id : 3,
-    title : "Blog",
+    // title : "Blog",
+    title : "Control",
     url : "/blog"
   },
   {
     id : 4,
-    title : "About",
+    // title : "About",
+    title : "Alert",
     url : "/about"
   },
   {
@@ -39,6 +41,12 @@ const links = [
     title : "Dasboard",
     url : "/dashboard",
   },
+  {
+    id : 7,
+    title : "Report",
+    url : "/report",
+  },
+
 ];
 
 const Navbar = () => {
@@ -46,7 +54,7 @@ const Navbar = () => {
   return (
     <div className={styles.container}>
       <Link href='/' className={styles.logo}>
-      LemonUp
+      UAV Manager
       </Link>
 
       <div className={styles.links}>

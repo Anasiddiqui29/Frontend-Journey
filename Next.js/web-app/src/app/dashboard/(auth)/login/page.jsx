@@ -33,17 +33,24 @@ const Login = () => {
       <form className={styles.form} onSubmit={handleSubmit}>
         <input 
         type='text'
-        placeholder='email'
+        // placeholder='email'
+        placeholder='username'
         className={styles.input}
         />
         <input 
-        type='text'
+        type='password'
         placeholder='password'
         className={styles.input}
         />
         <button className={styles.button}>Login</button>
+        
       </form>
-      <button onClick={() => signIn("google")}>Login with Google</button>
+
+      <div className={styles.rememberme}>
+        <input type="checkbox" id="remember" name="remember" value="remember" />
+        <label htmlFor="remember">Remember me</label>
+      </div>
+      <button className={styles.google} onClick={() => signIn("google")}>Login with Google</button>
     </div>
   )
 }

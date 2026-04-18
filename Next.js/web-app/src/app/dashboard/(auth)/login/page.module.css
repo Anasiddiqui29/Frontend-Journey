@@ -33,3 +33,20 @@
   color: #eee;
   font-weight: bold;
 }
+
+.rememberme{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.google{
+  width: 200px;
+  padding: 20px;
+  cursor: pointer;
+  background-color: #4285F4;
+  border: none;
+  border-radius: 20px;
+  color: #eee;
+  font-weight: bold;
+}

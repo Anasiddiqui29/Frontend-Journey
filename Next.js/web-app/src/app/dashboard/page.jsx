@@ -65,7 +65,23 @@ const Dashboard = () => {
   console.log(data)
 
   return (
-    <div className={styles.container}>Dashboard</div>
+    <div className={styles.container}>
+      <h1 className={styles.title}>Dashboard</h1>
+      <h2 className={styles.desc}>Welcome {session?.data?.user.name}</h2>
+      
+      <h1 className={styles.UAV_Status}>UAV Status</h1>
+      <div>
+        <h2 className={styles.UAV_Desc}>🔋 Battery: 90% Remaining</h2>
+        <h2 className={styles.UAV_Desc}>⛰️ Altitude: 1000 Meters</h2>
+        <h2 className={styles.UAV_Desc}>⚡ Speed: 15 Kmph</h2>
+      </div>
+
+      <h1 className={styles.Map}>Map View</h1>
+      <div className={styles.map}>
+        <div className={styles.marker}>🚁</div>
+        <p className={styles.coords}>Lat: 24.86, Lng: 67.00</p>
+      </div>   
+    </div>
   )
 }
 

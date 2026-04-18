@@ -1,0 +1,337 @@
+/* ====== GLOBAL CONTAINER ====== */
+.container {
+  padding: 40px;
+  /* background: linear-gradient(135deg, #02140a 0%, #064e3b 100%);
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+  border: 1px solid rgba(34, 197, 94, 0.4); */
+  min-height: 100vh;
+  color: #e2e8f0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* ====== TITLE ====== */
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 40px 0;
+  color: #f1f5f9;
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* ====== MAIN LAYOUT with Responsive Design ====== */
+.mainLayout {
+  display: grid;
+  grid-template-columns: 280px 1fr 320px;
+  gap: 24px;
+  align-items: start;
+}
+
+/* ====== LEFT PANEL (Filters & Summary) ====== */
+.leftPanel {
+  /* background: #1e293b;
+  border: 1px solid rgba(148, 163, 184, 0.15); */
+  background: #0f1f1a;
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  /* box-shadow: 0 0 25px rgba(34, 197, 94, 0.2); */
+  border-radius: 12px;
+  padding: 24px;
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); */
+  height: fit-content;
+  transition: all 0.3s ease;
+}
+
+.leftPanel:hover {
+  border-color: rgba(148, 163, 184, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.leftPanel h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+  color: #f1f5f9;
+  border-bottom: 2px solid #22c55e;
+  padding-bottom: 12px;
+}
+
+.leftPanel label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 16px 0 6px 0;
+  color: #cbd5e1;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.leftPanel input,
+.leftPanel select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  border: 1px solid rgba(34, 197, 94, 0.25);
+  border-radius: 6px;
+  background: #02140a; /* dark green background */
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+}
+
+.leftPanel input:focus,
+.leftPanel select:focus {
+  outline: none;
+  border-color: #22c55e;
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+  background: #1e293b;
+}
+
+.filterBtn {
+  width: 100%;
+  padding: 12px;
+  margin: 20px 0 0 0;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.filterBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(14, 165, 233, 0.3);
+}
+
+.filterBtn:active {
+  transform: translateY(0);
+}
+
+/* Summary Box */
+.summary {
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 24px;
+  border-left: 4px solid #4ade80;
+}
+
+.summary h3 {
+  font-size: 1.1rem;
+  margin: 0 0 12px 0;
+  color: white;
+  font-weight: 600;
+}
+
+.summary p {
+  margin: 8px 0;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 500;
+}
+
+/* ====== CENTER PANEL (Flight Logs Table) ====== */
+.centerPanel {
+  /* background: #1e293b;
+  border: 1px solid rgba(148, 163, 184, 0.15); */
+  border-radius: 12px;
+  padding: 24px;
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); */
+  background: #0f1f1a;
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  box-shadow: 0 0 25px rgba(34, 197, 94, 0.2);
+}
+
+.centerPanel h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+  color: #f1f5f9;
+  border-bottom: 2px solid #10b981;
+  padding-bottom: 12px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.table thead {
+  background: #022c22; /* dark green */
+  border-bottom: 2px solid rgba(34, 197, 94, 0.3); /* neon green tint */
+}
+
+.table th {
+  padding: 14px 12px;
+  text-align: left;
+  font-weight: 600;
+  color: #cbd5e1;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  font-size: 0.85rem;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+  transition: all 0.2s ease;
+}
+
+.table tbody tr:hover {
+  background: rgba(14, 165, 233, 0.08);
+  box-shadow: inset 0 0 10px rgba(14, 165, 233, 0.1);
+}
+
+.table td {
+  padding: 14px 12px;
+  color: #e2e8f0;
+  vertical-align: middle;
+}
+
+.table td:first-child {
+  font-weight: 600;
+  color: #22c55e;
+}
+
+/* ====== RIGHT PANEL (Performance Cards) ====== */
+.rightPanel {
+  /* background: #1e293b;
+  border: 1px solid rgba(148, 163, 184, 0.15); */
+  border-radius: 12px;
+  padding: 24px;
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); */
+  background: #0f1f1a;
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  /* box-shadow: 0 0 25px rgba(34, 197, 94, 0.2); */
+  height: fit-content;
+}
+
+.rightPanel h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+  color: #f1f5f9;
+  border-bottom: 2px solid #f59e0b;
+  padding-bottom: 12px;
+}
+
+.graphCard {
+  /* background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  border: 1px solid rgba(148, 163, 184, 0.15); */
+  background: linear-gradient(135deg, #022c22 0%, #064e3b 100%);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 16px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.graphCard:hover {
+  border-color: rgba(245, 158, 11, 0.3);
+  box-shadow: 0 6px 16px rgba(245, 158, 11, 0.1);
+  transform: translateY(-2px);
+}
+
+.graphCard h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+  color: #f1f5f9;
+}
+
+.graphPlaceholder {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #94a3b8;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  background-image: url("/Performance_graph.png");
+  background-size: cover;
+}
+
+.graphPlaceholderBattery{
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #94a3b8;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  background-image: url("/Battery_graph.png");
+  background-size: cover;
+}
+
+.graphCard:hover .graphPlaceholder {
+  border-color: rgba(148, 163, 184, 0.4);
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.15) 0%, rgba(16, 185, 129, 0.15) 100%);
+}
+
+/* ====== RESPONSIVE DESIGN (Tablet) ====== */
+@media (max-width: 1024px) {
+  .mainLayout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .leftPanel,
+  .centerPanel,
+  .rightPanel {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .container {
+    padding: 24px;
+  }
+}
+
+/* ====== RESPONSIVE DESIGN (Mobile) ====== */
+@media (max-width: 640px) {
+  .container {
+    padding: 16px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+  }
+
+  .leftPanel,
+  .centerPanel,
+  .rightPanel {
+    padding: 16px;
+    border-radius: 10px;
+  }
+
+  .leftPanel h2,
+  .centerPanel h2,
+  .rightPanel h2 {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+  }
+
+  .table {
+    font-size: 0.85rem;
+  }
+
+  .table th,
+  .table td {
+    padding: 10px 8px;
+  }
+
+  .graphPlaceholder {
+    height: 140px;
+  }
+}
