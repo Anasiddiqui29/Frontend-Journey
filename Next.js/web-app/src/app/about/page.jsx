@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div className={styles.container}>
       
-      {/* <div className={styles.imgContainer}>
+      <div className={styles.imgContainer}>
         <Image src="/abt.jpeg" fill={true} alt='img' className={styles.img}></Image>
         <div className={styles.imageText}>
           <h1 className={styles.imgTitle}>
@@ -57,17 +57,17 @@ const About = () => {
           <Button url="/contact" text="Contact"></Button>
 
         </div>
-      </div> */}
+      </div>
 
       
-      <h1 className={styles.title}>🍃Wind Alert</h1>
+      {/* <h1 className={styles.title}>🍃Wind Alert</h1>
       
       <div className={styles.content}>
       <div className={styles.left}>
       
         <div className={styles.Card}>
-          <div className={`${styles.status} ${styles.safe}`}>
-            <p className={styles.text1}>📊 Current Wind Conditions: SAFE</p>
+          <div className={`${styles.status} ${styles.critical}`}>
+            <p className={styles.text1}>📊 Current Wind Conditions: CRITICAL</p>
           </div>
         </div>
 
@@ -75,7 +75,7 @@ const About = () => {
           <div className={styles.msgs}>
               <p className={styles.msgText}>What to do next?</p>
               <br></br>
-              <p className={styles.msgText}>You are good to go <b></b></p>
+              <p className={styles.msgText}>Excercise caution<b></b></p>
           </div>
           <div className={styles.msgs}>
             <p className={styles.msgText}>📢 Wind Alert: Crosswind fluctuations increasing</p>
@@ -86,7 +86,7 @@ const About = () => {
       <div className={styles.right}>
         <Image src="/Windy2.png" fill alt="wind" className={styles.image}/>
       </div>
-      </div>
+      </div> */}
 
     </div>
   )

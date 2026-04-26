@@ -8,9 +8,9 @@ export default function Home() {
    <div className={styles.container}>
     
     <div className={styles.item}>
-      <h1 className={styles.title}>Control Your UAVs With Ease</h1>
+      <h1 className={styles.title}>Try Our Best Drinks</h1>
       <p className={styles.desc}>
-        Future is here. Look at the world through your UAVs.
+        Future is here. Try our futuristic drink.
       </p>
       
       <Button url="/portfolio" text="See our Work"></Button>

@@ -14,21 +14,19 @@ const links = [
     title : "Home",
     url : "/"  
   },
-  // {
-  //   id: 2,
-  //   title : "Portfolio",
-  //   url : "/portfolio",
-  // },
+  {
+    id: 2,
+    title : "Portfolio",
+    url : "/portfolio",
+  },
   {
     id : 3,
-    // title : "Blog",
-    title : "Control",
+    title : "Blog",
     url : "/blog"
   },
   {
     id : 4,
-    // title : "About",
-    title : "Alert",
+    title : "About",
     url : "/about"
   },
   {
@@ -40,11 +38,6 @@ const links = [
     id : 6,
     title : "Dasboard",
     url : "/dashboard",
-  },
-  {
-    id : 7,
-    title : "Report",
-    url : "/report",
   },
 
 ];
